@@ -19,11 +19,12 @@ There are two ways to load JS script efficiently: 1. Create an event listener to
 
 ### var vs let
 
-| Property | Var | Let
-| Purpose | | It creates reassignable, block-scoped variables
-| Scope | Entire enclosing function | The block in which they are created as well as any sub-blocks
-| Redeclaration | Can be redeclared in the same scope | Redeclaration is not allowed in the same scope
-| Temporal dead zone behavior | It has a value if initialized, otherwise it's undefined | Access to it results in a ReferenceError
-| Hoisting | Var variables are hoisted | Let variables are not hoisted
+| Property                    | Var                                                     | Let                                                           |
+| --------------------------- | ------------------------------------------------------- | ------------------------------------------------------------- |
+| Purpose                     | It creates function-scoped or globally scoped variables | It creates reassignable, block-scoped variables               |
+| Scope                       | Entire enclosing function                               | The block in which they are created as well as any sub-blocks |
+| Redeclaration               | Can be redeclared in the same scope                     | Redeclaration is not allowed in the same scope                |
+| Temporal dead zone behavior | It has a value if initialized, otherwise it's undefined | Access to it results in a ReferenceError                      |
+| Hoisting                    | Var variables are hoisted                               | Let variables are not hoisted                                 |
 
 ### Hoisting
